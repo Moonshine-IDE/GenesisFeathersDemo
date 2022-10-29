@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="Genesis Haxe / OpenFL / Feathers UI Demo" package="net.prominic.genesis.feathersdemo" version="1.0.0" company="Prominic.NET" />
+	<meta title="Genesis Haxe / OpenFL / Feathers UI Demo" version="1.0.0" company="Prominic.NET" />
+	<meta package="net.prominic.genesis.feathersdemo" unless="packageid" />
+	<meta package="${packageid}" if="packageid" />
 	<app main="Main" path="Export" file="GenesisFeathersDemo" />
 	
 	<source path="Source" />
+
+	<echo value="Building GenesisFeathersDemo (${packageid})..." if="packageid"/>
+	<echo value="Building GenesisFeathersDemo (net.prominic.genesis.feathersdemo)..." unless="packageid" />
 	
 	<haxelib name="openfl" />
 	<haxelib name="feathersui" />
@@ -12,11 +17,24 @@
 	<assets path="Assets" rename="assets" />
 
 	<section if="html5">
+		<echo value="Target: HTML5" />
 		<window width="0" height="0" allow-high-dpi="true" />
 	</section>
 
 	<section if="desktop">
+		<echo value="Target: Desktop" />
 		<window width="960" height="720" allow-high-dpi="true" />
 	</section>
+
+	<section if="ios">
+		<echo value="Target: iOS" />
+		<error value="Error: teamid is undefined. Define your Apple Developer Team ID with -Dteamid={teamid}" unless="teamid" />
+		<echo value="Team ID: ${teamid}" />
+		<architecture name="arm64" exclude="armv7" />
+		<config:ios deployment="12.0" />
+		<define name="HXCPP_ARM64"/>
+	</section>
+	
+	<template path="Templates" />
 	
 </project>
