@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="Genesis Haxe / OpenFL / Feathers UI Demo" package="net.prominic.genesis.feathersdemo" version="1.0.0" company="Prominic.NET" />
+	<app main="Main" path="Export" file="GenesisFeathersDemo" />
+	
+	<source path="Source" />
+	
+	<haxelib name="openfl" />
+	<haxelib name="feathersui" />
+	
+	<assets path="Assets" rename="assets" />
+
+	<section if="html5">
+		<window width="0" height="0" allow-high-dpi="true" />
+	</section>
+
+	<section if="desktop">
+		<window width="960" height="720" allow-high-dpi="true" />
+	</section>
+	
+</project>
