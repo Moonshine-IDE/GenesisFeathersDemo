@@ -23,7 +23,7 @@ Run the following command in terminal to build the Windows app
 
 Run the following command in terminal to build the Windows app
 
-`> openfl build windows`
+`> openfl build linux`
 
 ### Building the iOS app
 
