@@ -35,7 +35,7 @@ Run the following command in terminal to build the iOS/iPadOS app.
 
 Notes:
 - The minimum supported iOS SDK version is 12
-- iOS SDK Version 16 (and above) no longer supports the armv7 architecture
+- iOS SDK Version 16 (and above) no longer supports the armv7 architecture, so it has been disabled in the project config file
 
 ### Optional Package ID
 
