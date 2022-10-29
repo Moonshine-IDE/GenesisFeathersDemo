@@ -37,6 +37,12 @@ Notes:
 - The minimum supported iOS SDK version is 12
 - iOS SDK Version 16 (and above) no longer supports the armv7 architecture, so it has been disabled in the project config file
 
+#### Create iOS Payload (IPA)
+
+By default, OpenFL generates an *.app* file after a successful iOS build. To generate the *.ipa* file that you can copy to your iOS device, use the `createpayload` build parameter:
+
+`> openfl build ios -Dteamid={yourteamid} -Dcreatepayload`
+
 ### Optional Package ID
 
 By default the app is being built with `net.prominic.genesis.feathersdemo` package ID. To build with your own desired package id, just replace `{yourpackageid}` in the following command:
