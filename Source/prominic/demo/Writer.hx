@@ -11,7 +11,7 @@ import sys.io.File;
 
 class Writer {
 
-    public static final ALLOWED_FILE_NAME_CHARS:String = "a-z A-Z 0-9";
+    public static final ALLOWED_FILE_NAME_CHARS:String = "a-z A-Z 0-9 .";
     public static final DEFAULT_FILE_NAME:String = "default.txt";
     public static final MAX_FILE_NAME_LENGTH:Int = 32;
 
