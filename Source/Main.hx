@@ -102,7 +102,7 @@ class Main extends Application {
 
 	function _buttonPopupTriggered( e:TriggerEvent ) {
 
-		Alert.show( Labels.GenesisDescription, Labels.Genesis, [ "OK" ] );
+		Alert.show( Labels.GenesisDescription, Labels.Genesis, [ Labels.OK ] );
 
 	}
 
@@ -128,13 +128,13 @@ class Main extends Application {
 
 	function _writeSuccess() {
 
-		Alert.show( Labels.SuccessDescription, Labels.Success, [ "OK" ] );
+		Alert.show( Labels.SuccessDescription, Labels.Success, [ Labels.OK ] );
 
 	}
 
 	function _writeFailed() {
 
-		Alert.show( Labels.ErrorDescription, Labels.Error, [ "OK" ] );
+		Alert.show( Labels.ErrorDescription, Labels.Error, [ Labels.OK ] );
 		
 	}
 
@@ -147,6 +147,7 @@ enum abstract Labels( String ) to String {
 	var Genesis = "Genesis";
 	var GenesisDescription = "Apps catalog for Domino ecosystem";
 	var HelloWorld = "Hello World!";
+	var OK = "OK";
 	var ShowDialog = "Show Dialog";
 	var Success = "Success";
 	var SuccessDescription = "Test writing has been successful";
