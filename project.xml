@@ -33,6 +33,14 @@
 		<architecture name="arm64" exclude="armv7" />
 		<config:ios deployment="12.0" />
 		<define name="HXCPP_ARM64"/>
+		<section if="createpayload">
+			<postbuild cmd="mkdir Payload" />
+			<postbuild cmd="cp -R Export/ios/build/Debug-iphoneos/GenesisFeathersDemo.app Payload/" />
+			<!-- <postbuild cmd="cp -R Export/ios/build/Debug-iphoneos/GenesisFeathersDemo.app.dSYM Payload/" /> -->
+			<postbuild cmd="rm Export/ios/GenesisFeathersDemo.ipa" />
+			<postbuild cmd="zip -r -m -q Export/ios/GenesisFeathersDemo.zip Payload/" />
+			<postbuild cmd="mv Export/ios/GenesisFeathersDemo.zip Export/ios/GenesisFeathersDemo.ipa" />
+		</section>
 	</section>
 	
 	<template path="Templates" />
