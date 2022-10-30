@@ -35,9 +35,6 @@
 	<section if="ios">
 		<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 		<echo value="Target: iOS" />
-		-->
-		<error value="Error: teamid is undefined. Define your Apple Developer Team ID with -Dteamid={yourteamid} and try again" unless="teamid" />
-		<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 		<echo value="Team ID: ${teamid}" />
 		-->
 		<architecture name="arm64" exclude="armv7" />
