@@ -8,8 +8,10 @@
 	
 	<source path="Source" />
 
+	<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 	<echo value="Building GenesisFeathersDemo (${packageid})..." if="packageid"/>
 	<echo value="Building GenesisFeathersDemo (net.prominic.genesis.feathersdemo)..." unless="packageid" />
+	 -->
 	
 	<haxelib name="openfl" />
 	<haxelib name="feathersui" />
@@ -17,19 +19,27 @@
 	<assets path="Assets" rename="assets" />
 
 	<section if="html5">
+		<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 		<echo value="Target: HTML5" />
+		-->
 		<window width="0" height="0" allow-high-dpi="true" />
 	</section>
 
 	<section if="desktop">
+		<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 		<echo value="Target: Desktop" />
+		-->
 		<window width="960" height="720" allow-high-dpi="true" />
 	</section>
 
 	<section if="ios">
+		<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 		<echo value="Target: iOS" />
+		-->
 		<error value="Error: teamid is undefined. Define your Apple Developer Team ID with -Dteamid={yourteamid} and try again" unless="teamid" />
+		<!-- Temporarliy disabled echo, as it breaks Haxe Language Server in VSCode
 		<echo value="Team ID: ${teamid}" />
+		-->
 		<architecture name="arm64" exclude="armv7" />
 		<config:ios deployment="12.0" />
 		<define name="HXCPP_ARM64"/>
