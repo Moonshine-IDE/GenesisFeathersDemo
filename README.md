@@ -51,17 +51,18 @@ Run the following command in terminal to build the iOS/iPadOS app.
 
 `> openfl build ios -Dteamid={yourteamid}`
 
-Notes:
-- The minimum supported iOS SDK version is 12
-- iOS SDK Version 16 (and above) no longer supports the armv7 architecture, so it has been disabled in the project config file
-
 #### Create iOS Payload (IPA)
 
 By default, OpenFL generates an *.app* file after a successful iOS build. To generate the *.ipa* file that you can copy to your iOS device, use the `createpayload` build parameter:
 
 `> openfl build ios -Dteamid={yourteamid} -Dcreatepayload`
 
-> **Important**: You can only copy and install the generated IPA on your device if [Developer Mode](https://stackoverflow.com/questions/73733701/how-to-enable-developer-mode-in-ios-16-0) is enabled. Needless to say, enabling Developer Mode is a potentially unsafe procedure.
+> **Important**: You can only copy and install the generated IPA on your device if [Developer Mode](https://stackoverflow.com/questions/73733701/how-to-enable-developer-mode-in-ios-16-0) is enabled. Needless to say, enabling Developer Mode on your device is a potentially unsafe procedure.
+
+#### Notes
+
+- The minimum supported iOS SDK version is 12
+- iOS SDK Version 16 (and above) no longer supports the armv7 architecture, so it has been disabled in the project config file
 
 ## Optional Build Parameters
 
