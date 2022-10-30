@@ -1,3 +1,4 @@
 Export/*
 Payload/*
 *.code-workspace
+**/.DS_Store
